@@ -1,0 +1,31 @@
+<!--pages/register/register.wxml-->
+<!-- <i-panel title="基础用法">
+    <i-input value="{{ value1 }}" title="收货人" autofocus placeholder="名字" />
+    <i-input value="{{ value2 }}" type="number" title="联系电话" placeholder="请输入手机号" />
+    <i-input value="{{ value3 }}" type="textarea" title="详细地址" placeholder="请输入详细地址(最多50字)" maxlength="50" />
+    <i-input value="{{ value4 }}" title="用户信息" disabled />
+</i-panel> -->
+
+<i-panel title="管理人员注册">
+    <i-input value="{{ value1 }}" title="姓名" placeholder="请输入真实姓名" />
+    <view class="section">
+      <picker value="{{ index }}" range="{{ gender }}" bindchange="bindSexChange">
+        <i-input value="{{ gender[index] }}" title="性别" placeholder="男" disabled/>
+      </picker>
+    </view>
+    <i-input value="{{ value2 }}" title="身份证号" placeholder="请输入身份证"/>
+    <i-input value="{{ value3 }}" title="职位" placeholder="请输入职位"/>
+    <view class="section">
+      <picker mode="date" value="{{date}}" start="1950-01-01" end="{{end}}" bindchange="bindDateChange">
+        <view class="picker">
+          <i-input value="{{ date }}" title="出生日期" placeholder="1990-09-01" disabled/>
+        </view>
+      </picker>
+    </view>
+    <i-button bindtap="bindRegister" type="success" shape="circle" size="large">注册</i-button>
+</i-panel>
+
+<!-- <i-panel title="圆角输入框">
+    <i-input value="{{ value6 }}" type="number" right title="消费总额" mode="wrapped" placeholder="询问收银员后输入" />
+    <i-input value="{{ value7 }}" type="number" right error title="不参与优惠金额" mode="wrapped" placeholder="询问收银员后输入" />
+</i-panel> -->

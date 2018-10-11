@@ -1,0 +1,4 @@
+<!--pages/homePage/homePage.wxml-->
+<i-panel title="欢迎来到主页">
+
+</i-panel>
